@@ -28,3 +28,16 @@ function linkAction() {
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+// background
+
+const scrollHeader = () => {
+  const header = document.getElementById("header");
+
+  if (this.scrollY >= 80) {
+    header.classList.add("scroll-head");
+  } else {
+    header.classList.remove("scroll-head");
+  }
+};
+window.addEventListener("scroll", scrollHeader);
